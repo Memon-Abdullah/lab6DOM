@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>task 5 lab 6</title>
+
+    <style>
+        .main{
+            background-color: black;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+    <section id="container">
+        this is container
+        <ul>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer"></div>
+
+    <script>
+        // Select the section with an id of container without using querySelector.
+
+        let my_Section = document.getElementById("container");
+        // my_Section.textContent = "Hello!"; this is commented because task 8 to 10 of task 5 is not working
+        let section = document.querySelector("#container");
+        let second = document.querySelectorAll(".second");
+        var listItem = document.querySelector('ol li.third');
+        // 6. Add the class main to the div with a class of footer.
+
+        var footer = document.querySelector(".footer");
+        footer.classList.add('main');
+        footer.classList.remove('main');
+
+        // 8. Create a new li element.
+        // 9. Give the li the text "four".
+        // 10.Append the li to the ul element.
+        
+        const list = document.createElement('li');
+        list.textContent = "four";
+        const ul = document.querySelector('ul');
+        ul.appendChild(list);
+
+        // 11.Loop over all of the lis inside the ol tag and give them a background color of "green".
+        var listStyle = document.querySelectorAll('ol li');
+        listStyle.forEach(function(li){
+            li.style.backgroundColor = 'green';
+        })
+
+        // 12.Remove the div with a class of footer.
+        var footer = document.querySelector(".footer");
+        footer.classList.remove('footer');
+
+    </script>
+</body>
+
+</html>

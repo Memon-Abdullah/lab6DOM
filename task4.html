@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 4 of lab 6</title>
+</head>
+<body>
+    <header>Insert row in a table </header>
+    <table id="sampleTable" border="1">
+        <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+        </tr>
+        <tr>
+        
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+        </tr>
+    </table>
+    <br>
+    <input type="button" onclick="insert_Row()" value="Insert row"> 
+
+    <script>
+        function insert_Row(){
+            let row = document.createElement("tr");
+            // row.innerText = "row 3";
+            let table = document.getElementById("sampleTable");
+            table.appendChild(row);
+            
+            var col1 = row.insertCell(0);
+            var col2 = row.insertCell(1);
+
+            col1.innerHTML="new row c1";
+            col2.innerHTML="new row c2";
+
+        }
+    </script>
+</body>
+</html>

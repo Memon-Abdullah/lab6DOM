@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task one lab 6</title>
+</head>
+<body>
+    <input type="button" value="Click to set paragraph background color"
+onclick="set_background()">
+
+<h1>task one By Abdullah Memon </h1>
+<p>w3resource JavaScript Exercises</p>
+<p>w3resource PHP Exercises</p>
+    
+    <script>
+        let paragraph = document.getElementsByTagName('p');
+        function set_background(){
+            for(let i =0; i,paragraph.length;i++){
+                paragraph[i].style.background = "black";
+                paragraph[i].style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

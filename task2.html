@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 2 of lab 6</title>
+</head>
+<body>
+    <p><a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self"href="http://www.w3resource.com/">w3resource</a></p> 
+    <button onclick="getAttributes()">Click here to get attributes value</button>
+
+     <h3 id="container"></h3>   
+    <script>
+
+        function getAttributes(){
+            var link = document.getElementById("w3r");
+            var href = link.getAttribute("href");
+            var hreflang = link.getAttribute("hreflang");
+            var rel = link.getAttribute("rel");
+            var target = link.getAttribute("target");
+            var type = link.getAttribute("type");    
+            
+            alert(`href: ${href} \nhreflang: ${hreflang} \nrel: ${rel} \ntarget: ${target} \ntype: ${type}`);
+
+            const atr = document.createElement("p");
+            atr.textContent="href: " + href + "\nhreflang: " + hreflang + "\nrel: " + rel + "\ntarget: " + target + "\ntype: " + type;
+            const container = document.getElementById('container');
+            container.appendChild(atr);
+        }
+        
+    </script>
+</body>
+</html>
